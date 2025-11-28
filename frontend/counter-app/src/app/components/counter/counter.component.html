@@ -1,0 +1,10 @@
+<!-- src/app/components/counter/counter.component.html -->
+
+<div class="counter-container">
+  <h2>Current Count: {{ count }}</h2>
+  <div class="button-group">
+    <button (click)="increment()" class="btn-increment">+</button>
+    <button (click)="decrement()" [disabled]="count === 0" class="btn-decrement">-</button>
+  </div>
+  <p NgIf="count === 0" class="info-text">Count cannot go below zero.</p>
+</div>
